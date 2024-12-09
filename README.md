@@ -1,1 +1,1 @@
-# js-dsa
+# JavaScript DSA Coding Problems
