@@ -22,7 +22,7 @@
  Output: false
  */
 
-const isPalindrome = (sentence) => {
+export const isPalindrome = (sentence: string) => {
     const cleanString = sentence.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
     const reversedString = cleanString.split("").reverse().join("");
 

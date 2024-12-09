@@ -1,0 +1,25 @@
+{
+    "name": "js-dsa",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "ts-node",
+        "build": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/samuelmbp/js-dsa.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/samuelmbp/js-dsa/issues"
+    },
+    "homepage": "https://github.com/samuelmbp/js-dsa#readme",
+    "devDependencies": {
+        "@types/node": "^22.10.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7.2"
+    }
+}
