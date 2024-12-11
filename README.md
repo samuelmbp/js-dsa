@@ -2,6 +2,8 @@
 
 ## How to run a file
 
+**Example**
+
 ```bash
-    npm start src/isPalindrome.ts
+    npm start solutions/isPalindrome.ts
 ```
