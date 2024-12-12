@@ -21,10 +21,37 @@ const secondLargestNumber = (numbers: number[]): number => {
         throw new Error("Array must have at least two elements.");
     }
 
-    const sortedArray = numbers.sort((a, b) => a - b);
+    const uniqueNumbers = Array.from(new Set(numbers));
 
+    if (uniqueNumbers.length < 2) {
+        throw new Error(
+            "No second largest number exists (e.g., all elements are identical)."
+        );
+    }
+
+    // First Solution: O (n log n)
+    /**
+    const sortedArray = uniqueNumbers.sort((a, b) => a - b);
     return sortedArray[sortedArray.length - 2];
+    */
+
+    // Second Solution: O(n)
+    let largest = Number.MIN_VALUE;
+    let secondLargest = Number.MIN_VALUE;
+
+    for (let num of uniqueNumbers) {
+        if (num > largest) {
+            secondLargest = largest;
+            largest = num;
+        } else if (num > secondLargest) {
+            secondLargest = num;
+        }
+    }
+
+    return secondLargest;
 };
 
-console.log(secondLargestNumber([3, 2, 1, 5, 6]));
-console.log(secondLargestNumber([1, 2]));
+console.log(secondLargestNumber([3, 2, 1, 5, 6])); // 5
+console.log(secondLargestNumber([1, 2])); // 1
+// console.log(secondLargestNumber([2])); // Error
+// console.log(secondLargestNumber([5, 5, 5])); // Error
