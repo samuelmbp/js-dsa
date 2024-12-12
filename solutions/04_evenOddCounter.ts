@@ -15,19 +15,11 @@ Odd count: 3 (the odd numbers are 1, 3, and 5)
  */
 
 const evenOddCounter = (numbers: number[]): string => {
-    if (numbers.length < 1) {
-        return `Evens: 0 -> Odds: 0`;
-    }
-
     let evens = 0;
     let odds = 0;
 
     for (const number of numbers) {
-        if (number % 2 === 0) {
-            evens++;
-        } else {
-            odds++;
-        }
+        number % 2 === 0 ? evens++ : odds++;
     }
 
     return `Evens: ${evens} -> Odds: ${odds}`;
