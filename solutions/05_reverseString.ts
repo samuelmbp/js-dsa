@@ -43,5 +43,5 @@ export const reverseString = (sentence: string): string => {
         .join(" ");
 };
 
-console.log(reverseString("Code is fun"));
-console.log(reverseString("Hello, world!"));
+console.log(reverseString("Code is fun")); // edoC si nuf
+console.log(reverseString("Hello, world!")); // ,olleH !dlrow
