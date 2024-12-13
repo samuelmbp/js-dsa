@@ -25,7 +25,8 @@ export const reverseString = (sentence: string): string => {
      * 3. Join the reversed words back into a single string.
      * 4. Return the reversed sentence.
      */
-    // SOLUTION 1
+
+    /* SOLUTION 1
     const reversedWords = [];
     const words = sentence.split(" ");
     for (let i = 0; i < words.length; i++) {
@@ -33,6 +34,13 @@ export const reverseString = (sentence: string): string => {
     }
 
     return reversedWords.join(" ");
+    */
+
+    // SOLUTION 2
+    return sentence
+        .split(" ")
+        .map((word) => word.split("").reverse().join(""))
+        .join(" ");
 };
 
 console.log(reverseString("Code is fun"));
