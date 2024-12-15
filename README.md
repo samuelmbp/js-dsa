@@ -1,4 +1,4 @@
-# JavaScript/TypeScript DSA Coding Problems
+# DSA Coding Problems (JavaScript/TypeScript)
 
 This repository contains JS/TS solutions to a variety of Data Structures and Algorithms (DSA) problems. It’s designed to help improve problem-solving skills and build a solid understanding of core programming concepts.
 
