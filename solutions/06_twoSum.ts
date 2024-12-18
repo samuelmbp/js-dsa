@@ -21,6 +21,8 @@
 
 const twoSum = (numbers: number[], target: number): number[] => {
     // Solution 1 O(n^2)
+
+    /*
     for (let i = 0; i < numbers.length; i++) {
         for (let j = i + 1; j < numbers.length; j++) {
             if (numbers[i] + numbers[j] === target) {
@@ -28,6 +30,20 @@ const twoSum = (numbers: number[], target: number): number[] => {
             }
         }
     }
+    return [];
+    */
+
+    // Solution 2 O(n)
+    const map = new Map<number, number>();
+    for (let i = 0; i < numbers.length; i++) {
+        const compliment = target - numbers[i];
+        if (map.has(compliment)) {
+            return [map.get(compliment)!, i];
+        } else {
+            map.set(numbers[i], i);
+        }
+    }
+
     return [];
 };
 
