@@ -19,7 +19,9 @@ Ensure the function handles both empty strings and larger strings efficiently.
 
 const replaceZerosWithOnes = (binaryString: string): string => {
     if (binaryString.length === 0) return binaryString;
-    
+
+    // SOLUTION 1
+    /*
     const binaryArray = binaryString.split("");
     for (let i = 0; i < binaryArray.length; i++) {
         if (binaryArray[i] === "0") {
@@ -28,6 +30,10 @@ const replaceZerosWithOnes = (binaryString: string): string => {
     }
 
     return binaryArray.join("");
+    */
+
+    // SOLUTION 2
+    return binaryString.replace(/0/g, "1");
 };
 
 console.log(replaceZerosWithOnes("100101")); // 111111
